@@ -2,6 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
+const path = require('path');
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const SUPABASE_JWT_SECRET = process.env.SUPABASE_JWT_SECRET;
@@ -37,6 +38,7 @@ function requireAuth(req, res, next) {
 }
 
 app.get('/health', (_req, res) => res.json({ ok: true }));
+app.get('/privacy', (_req, res) => res.sendFile(path.join(__dirname, 'privacy.html')));
 
 app.post('/v1/chat', requireAuth, async (req, res) => {
   try {

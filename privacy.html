@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cupid.coach — Privacy Policy</title>
+<style>
+  body { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; font: 15px/1.6 -apple-system, system-ui, sans-serif; color: #222; }
+  h1 { font-size: 24px; } h2 { font-size: 18px; margin-top: 2em; }
+  .updated { color: #777; font-size: 13px; }
+  .callout { background: #fdeeee; border: 1px solid #e5b6b6; border-radius: 8px; padding: 14px 16px; margin: 1.5em 0; }
+</style>
+</head>
+<body>
+<h1>cupid.coach — Privacy Policy</h1>
+<p class="updated">Last updated: 2026-07-19</p>
+
+<h2>What stays on your device</h2>
+<p>Your conversations with your coach, your onboarding profile (what you're looking for and your
+personal deal-breakers), your tracked contacts and dates, post-date notes, live-date transcripts,
+and red-flag findings are all stored <strong>only on your device</strong> (local SQLite storage).
+We do not upload, sync, or have any access to this content on our servers. If you delete the app,
+this data is gone.</p>
+
+<h2>What we do collect</h2>
+<p>If you choose to create an account (optional — the app works without one), we store only your
+email address and an authentication credential via our self-hosted Supabase Auth service, used
+solely to identify you and gate access to our AI relay service (below) against abuse. We do not
+use this account to store, back up, or sync any of your dating content.</p>
+
+<h2>AI processing (chat & voice transcription)</h2>
+<p>Text you send your coach and audio you record for transcription are processed using Groq's AI
+API. On mobile, these requests pass through a relay server we operate that forwards them to Groq
+using our own API key and your account's sign-in token (to prevent abuse) — <strong>this relay does
+not log, store, or retain any request or response content</strong>; it is a stateless pass-through.
+On desktop, requests go directly from the app to Groq using your own configured API key.</p>
+
+<h2 id="date-mode">Date Mode — live audio recording</h2>
+<div class="callout">
+  Date Mode records audio during a date to transcribe it and offer real-time coaching suggestions.
+  <strong>Recording another person's conversation without their knowledge or consent may be illegal
+  in your jurisdiction</strong> (many US states require all-party consent to record a private
+  conversation). This is the user's responsibility to manage — the app includes a settings toggle
+  and a one-time notice about this, but does not enforce disclosure to the other party.
+</div>
+<p>Audio recorded during Date Mode is transcribed via the AI processing described above and the
+resulting text is stored locally on your device, same as any other date note. It is never uploaded
+to persistent storage on our servers.</p>
+
+<h2>Notifications</h2>
+<p>Date Mode coaching suggestions are delivered as local, on-device notifications. No push
+notification service or third-party notification provider is used.</p>
+
+<h2>Data deletion</h2>
+<p>Uninstalling the app removes all locally stored data. To delete your account (email/auth
+record only — this holds no dating content), contact us at the address below.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:ben@advancedmarketing.co">ben@advancedmarketing.co</a></p>
+</body>
+</html>
