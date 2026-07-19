@@ -1,0 +1,16 @@
+{
+  "name": "cupid-coach-proxy",
+  "version": "1.0.0",
+  "description": "Stateless Groq relay for the cupid.coach mobile app — forwards chat/transcription requests using a server-side API key, keyed off a Supabase-issued JWT. No request or response bodies are logged or persisted.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "express-rate-limit": "^7.4.0"
+  }
+}
